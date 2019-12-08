@@ -38,10 +38,12 @@ public:
 private slots:
     QNetworkRequest createRequest(const QString &apiStr);
 
-    QNetworkReply *sendCustomRequest(QNetworkAccessManager *manager,
-                                     QNetworkRequest &request,
-                                     const QString &type,
-                                     const QVariantMap &data);
+    QNetworkReply *sendCustomRequest(
+        QNetworkAccessManager *manager,
+        QNetworkRequest &request,
+        const QString &type,
+        const QVariantMap &data
+    );
 
     QByteArray variantMapToJson(QVariantMap data);
 
